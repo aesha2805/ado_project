@@ -1,0 +1,15 @@
+# Copied into each repo at pipeline/app.pipeline.yml.
+# This folder is the demo stand-in for Finthrive common/common-templates.
+# The function copies this file. It does not paste a second copy of the steps into the catalog commit.
+
+trigger:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - script: echo "Pipeline created from the shared demo template"
+    displayName: Shared template step
